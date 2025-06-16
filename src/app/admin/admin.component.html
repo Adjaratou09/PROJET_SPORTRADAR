@@ -1,1 +1,39 @@
-<p>admin works!</p>
+<div class="container mt-4" style="max-width: 700px;">
+  <h2 class="text-center">Ajouter une activité</h2>
+
+  <form (ngSubmit)="onSubmit()" #activiteForm="ngForm" id="admin-form">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nom de l'activité"
+        [(ngModel)]="activite.title"
+        name="title"
+        required
+      />
+    </div>
+
+    <button class="btn btn-primary w-100" [disabled]="activiteForm.invalid">Ajouter</button>
+  </form>
+
+  <hr />
+
+  <h3 class="mt-4">Liste des activités</h3>
+  <table class="table table-bordered mt-3">
+    <thead class="table-light">
+      <tr>
+        <th>Nom de l'activité</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of activities">
+        <td>{{ activity.title }}</td>
+        <td class="d-flex flex-row">
+          <button class="btn btn-primary btn-sm mx-2">Modifier</button>
+          <button class="btn btn-danger btn-sm mx-2" (click)="deleteActivity(activity.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

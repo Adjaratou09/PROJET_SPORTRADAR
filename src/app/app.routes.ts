@@ -3,6 +3,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const routes: Routes = [
     { path :'',
@@ -12,13 +13,18 @@ export const routes: Routes = [
         path: '',
         component:HeaderComponent
     },
-    {path:'Admin',
+    {
+        path:'',
+        component:FooterComponent
+    },
+    {path:'admin',
         component:AdminComponent
 
     },
-    {path:'Connexion',
+    {path:'connexion',
         component:LoginComponent
 
     },
+
 
 ];

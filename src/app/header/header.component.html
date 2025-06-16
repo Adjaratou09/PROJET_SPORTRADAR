@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<!--<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Accueil</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,4 +33,41 @@
       </form>
     </div>
   </div>
+</nav>-->
+
+<nav class="navbar navbar-expand-lg" style="background-color: #19045d;">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center text-white" href="#" style="font-weight: 600; font-size: 1.5rem;">
+      <img src="assets/LOGOS.jpg" alt="Logo" width="40" height="40" class="me-2">
+      SportRadar
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" routerLink="/">Accueil</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" routerLink="/recommandation">Recommandation</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" routerLink="/">Activités</a>
+        </li>
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" routerLink="/carte">Carte interactive</a>
+        </li>
+        <!--<li class="nav-item mx-3">
+          <a class="nav-link text-white" routerLink="/admin">Admin</a>
+        </li>-->
+        <li class="nav-item mx-3">
+          <a class="nav-link text-white" [routerLink]="'/connexion'">Connexion</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
+
