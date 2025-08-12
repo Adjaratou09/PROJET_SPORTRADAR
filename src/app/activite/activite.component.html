@@ -1,0 +1,225 @@
+<!-- Section : Coach IA et Formulaire -->
+<section class="activites-wrapper">
+  <h2 class="title">Ta coach IA t’accompagne</h2>
+
+  
+     <div class="form-container">
+  <form>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="situation">Votre situation</label>
+        <input type="text" id="situation" placeholder="1 trimestre de grossesse">
+      </div>
+      <div class="form-group">
+        <label for="activite">Type d'activité préféré</label>
+        <input type="text" id="activite" placeholder="Cardio">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="disponibilites">Disponibilités</label>
+        <input type="text" id="disponibilites" placeholder="Les matines">
+      </div>
+      <div class="form-group">
+        <label for="niveau">Niveau</label>
+        <input type="text" id="niveau" placeholder="Débutante">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="localisation">Localisation</label>
+        <input type="text" id="localisation" placeholder="Votre adresse">
+      </div>
+      <div class="form-group">
+        <label for="objectif">Objectif principal</label>
+        <input type="text" id="objectif" placeholder="Rester en forme">
+      </div>
+    </div>
+
+    <div class="checkbox-row">
+      <input type="checkbox" id="sportzen">
+      <label for="sportzen">Afficher uniquement les activités labellisées <strong>SportZen</strong></label>
+    </div>
+
+    <div class="btn-row">
+      <button type="submit">Rechercher</button>
+    </div>
+  </form>
+</div>
+
+</section>
+
+<!-- Flèche de défilement vers le bas -->
+<a href="#section-suivante" class="scroll-down">
+  <img src="assets/ImagesActivite/flechebas.png" alt="flèche vers le bas">
+</a>
+
+<!-- Section suivante : Activités à venir -->
+<section id="section-suivante" class="section-suivante">
+  <h3>Activités à venir pour vous</h3>
+  <button class="btn-connect">Se connecter pour réserver</button>
+</section>
+
+<!-- Section Grille des activités-->
+
+
+<div class="activities-section">
+  <!-- Partie gauche : Grille des activités -->
+  <div class="activities-grid">
+    <div class="activity-card">
+      <img src="/assets/ImagesActivite/img1.png" alt="Pilates" />
+      <div class="lock-icon"><img src="/assets/ImagesActivite/cadenas2.png" /></div>
+      <div class="card-text">
+        <h4>Pilates →</h4>
+        <p>Salle partenaire</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="/assets/ImagesActivite/img2.png" alt="Tennis" />
+      <div class="lock-icon"><img src="/assets/ImagesActivite/cadenas2.png" /></div>
+      <div class="card-text">
+        <h4>Tennis →</h4>
+        <p>Entre fitgirls dans un terrain public</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="/assets/ImagesActivite/img3.png" alt="Aqua maman" />
+      <div class="lock-icon"><img src="/assets/ImagesActivite/cadenas2.png" /></div>
+      <div class="card-text">
+        <h4>Aqua maman →</h4>
+        <p>Vélos et activités dans l’eau</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="/assets/ImagesActivite/img4.png" alt="Danse douce" />
+      <div class="lock-icon"><img src="/assets/ImagesActivite/cadenas2.png" /></div>
+      <div class="card-text">
+        <h4>Danse douce →</h4>
+        <p>Cardio</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="/assets/ImagesActivite/img5.png" alt="Étirements doux" />
+      <div class="lock-icon"><img src="/assets/ImagesActivite/cadenas2.png" /></div>
+      <div class="card-text">
+        <h4>Étirements doux →</h4>
+        <p>Assouplissement à l’extérieur</p>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <img src="/assets/ImagesActivite/img6.png" alt="Coaching avec experte" />
+      <div class="lock-icon"><img src="/assets/ImagesActivite/cadenas2.png" /></div>
+      <div class="card-text">
+        <h4>Coaching avec experte →</h4>
+        <p>Fitness & bien-être en live</p>
+      </div>
+    </div>
+
+    <div class="activity-card large">
+      <img src="/assets/ImagesActivite/img7.png" alt="Gym douce prénatale" />
+      <div class="lock-icon"><img src="/assets/ImagesActivite/cadenas2.png" /></div>
+      <div class="card-text">
+        <h4>Gym douce prénatale →</h4>
+        <p>Salles municipales & de fitness</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Partie droite : Logo + messages -->
+  <div class="activities-side">
+   
+    <div class="logo-container">
+      <img src="/assets/ImagesActivite/fondblanc.png" alt="Sportradar logo" />
+    </div>
+  </div>
+</div>
+
+<!--Section -->
+
+
+<div class="activite-title"> Prochaines activités à proximité </div>
+    
+  <div class="activity-wrapper">
+  <div class="filter-bar">
+    <span class="filter">📍 Paris, rue Rivoli</span>
+    <span class="filter">🧘‍♀️ Sport zen</span>
+    <span class="filter">🚆 Trèves parv</span>
+    <span class="filter">Transports</span>
+  </div>
+  <div class="activity-wrapper">
+  <div class="map-and-list">
+
+    <!-- COLONNE GAUCHE : MAP -->
+    <div class="left-column">
+      <div id="mapid"></div>
+
+     
+
+      
+    </div>
+
+    <!-- COLONNE DROITE : LISTE ACTIVITÉS -->
+    <div class="right-column" *ngIf="activites$ | async as activites">
+      <div *ngFor="let act of activites" class="activity-card">
+        <div class="activity-img">
+          <img [src]="act.Image" [alt]="act.Titre" />
+        </div>
+        <div class="activity-details">
+          <h4>{{ act.Titre }}</h4>
+          <p>{{ act.Adresse }}</p>
+          <p class="meta">
+              <!--<img src="assets/ImagesActivite/localisation.png" />-->
+            📍 {{ act.Distance }}
+            <span *ngIf="act.Heure"> | 🕒 {{ act.Heure }}</span>
+            <span *ngIf="act.Temp"> | Transports {{ act.Temp }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<button (click)="ajouterActivitesManuelles()">Ajouter les activités manuellement</button>
+
+
+</div>
+
+
+
+ 
+  <!--AIzaSyALkrr6a5sDLYqucibylapZCvMfd-KDUUo-->
+
+
+<!--Derniere section-->
+<div class="hero-banner">
+  <h1>Parce que le bien-être commence par un pas…       SportRadar vous guide.</h1>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div #exampleModal class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p> Tu es super forte viens courir avec nous !</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

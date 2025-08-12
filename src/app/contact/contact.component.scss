@@ -1,0 +1,111 @@
+.contact-section {
+  background: url('/assets/CONTACT.png') no-repeat center center/cover;
+  padding: 60px 20px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  color: white;
+  min-width: 300px;
+}
+
+.left h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-card {
+  //background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  //box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:white;
+  
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+   color:white;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+form button {
+  background: #DBFEB8;
+  color: #5F5143;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*form button:hover {
+  background-color: #6c7ae0;
+}*/
+.error-message {
+  color: white;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+.message-info {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color:white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

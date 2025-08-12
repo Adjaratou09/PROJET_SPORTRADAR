@@ -5,6 +5,8 @@ import { from } from 'rxjs';
 
 //import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import  {  initializeApp,  provideFirebaseApp  }  from  '@angular/fire/app'; 
+import { getFirestore } from 'firebase/firestore';
+import { provideFirestore } from '@angular/fire/firestore';
 
 // TODO: Replace the following with your app's Firebase project configuration
 
@@ -12,6 +14,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    provideFirestore(() => getFirestore()),
     provideFirebaseApp(() =>
        initializeApp({
      apiKey: "AIzaSyAX3HS2Da2JkcgFST0dsyU71Zt4Slu-fVM",

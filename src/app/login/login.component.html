@@ -1,71 +1,49 @@
-!<!--<img src="/assets/images/LOGOS.jpg" class="img-thumbnail" alt="...">
-<div class="login-container">
-    <h2>Connexion</h2>
-    <div *ngIf="user; else loginForm">
-      <p>Bienvenue Maître {{ user.email }}!</p>
-      <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
+
+
+
+  <div class="login-wrapper d-flex">
+  
+  <!-- Colonne image avec texte -->
+  <div class="image-side d-none d-md-block">
+    <div class="overlay-text">
+      
+      <h1>Sport Radar- Maman en forme</h1>
+      <p>Fitness et maternité</p>
     </div>
-    <ng-template #loginForm>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" [(ngModel)]="email" placeholder="Saisissez votre email">
-      </div>
-      <div class="form-group">
-        <label for="password">Mot de passe:</label>
-        <input type="password" id="password" [(ngModel)]="password" placeholder="Saisissez votre mot de passe">
-      </div>
-    </ng-template>
-  </div>-->
-  <div class="logo-container text-center mb-3">
-  <img src="/assets/LOGOS.jpg" class="img-thumbnail me-2" width="100" height="100" alt="Logo SportRadar">
-</div>
-
-
-<div class="login-container">
-  <h2>Connexion</h2>
-
-  <div *ngIf="user; else loginForm">
-    <p>Bienvenue Maître {{ user.email }} !</p>
-    <p *ngIf="successMessage" class="success-message">{{ successMessage }}</p>
   </div>
 
-  <ng-template #loginForm>
-    <form (ngSubmit)="login()" class="form-group">
-      <div class="form-group mb-3">
-        <label for="email">Email :</label>
-        <input
-          type="email"
-          id="email"
-          [(ngModel)]="email"
-          name="email"
-          placeholder="Saisissez votre email"
-          class="form-control"
-          required
-        >
+  <!-- Colonne formulaire -->
+  <div class="form-side">
+    <div class="login-container">
+      <div class="text-center mb-3">
+        <h1 class="mt-2" style="color: #5f5143; ">Bienvenue</h1>
+        <p class="text-muted">Ton espace bien-être commence ici</p>
+        <img src="assets/fondblanc.png" alt="Logo" width="90">
+        
       </div>
 
-      <div class="form-group mb-3">
-        <label for="password">Mot de passe :</label>
-        <input
-          type="password"
-          id="password"
-          [(ngModel)]="password"
-          name="password"
-          placeholder="Saisissez votre mot de passe"
-          class="form-control"
-          required
-        >
-      </div>
+      <form (ngSubmit)="login()" #loginForm="ngForm">
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="email" class="form-control" [(ngModel)]="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label>Mot de passe</label>
+          <input type="password" class="form-control" [(ngModel)]="password" name="password" required>
+        </div>
+        <button type="submit" (click)="login()" class="btn btn-success w-100" style="  color: #0e0d0d; background-color: #dbfeb8">Connecte toi</button>
 
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <a href="#" class="text-primary">Mot de passe oublié ?</a>
-      </div>
+        <button type="button" class="btn btn-outline-dark w-100 mt-2" >
+          <img src="assets/google.png" width="30" class="me-2"> Se connecter avec Google
+        </button>
 
-      <button type="submit" class="btn btn-primary w-100">Se connecter</button>
-    </form>
+        <p class="text-center mt-3"> 
+         Pas encore de compte ? <a [routerLink]="'/inscription'" class="btn btn-link p-0 m-0 align-baseline">Inscris-toi</a>
+         </p>
 
-    <p *ngIf="errorMessage" class="text-danger mt-2">{{ errorMessage }}</p>
-  </ng-template>
+
+        <div *ngIf="errorMessage" class="text-danger text-center">{{ errorMessage }}</div>
+      </form>
+    </div>
+  </div>
 </div>
-
-      

@@ -1,0 +1,351 @@
+.programme-hero {
+  position: relative;
+  overflow: hidden;
+}
+  .hero-img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+    display: block;
+    
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    color: #5F5143;
+    background: #fff;
+    padding: 15px 18px;
+    border-radius: 20px;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'League spartan';
+    
+
+    .tagline {
+      font-weight: bold;
+      font-size: 1.2rem;
+
+      span {
+        color: #5F5143;
+        font-weight: 700;
+        font-family: 'League spartan';
+      }
+    }
+  }
+
+.hero-section {
+  position: relative;
+}
+
+
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.custom-banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centre horizontalement le contenu */
+  justify-content: center;
+  margin: 3rem auto;        /* centre le bloc dans la page */
+  padding: 2rem;
+  //border: 2px solid #A259FF;
+  max-width: 600px;
+  text-align: center;
+  font-family: 'Bellaboo', cursive;
+  color: #4b3f2d;
+  background-color: #fff;   /* optionnel pour contraste */
+  //border-radius: 12px;      /* optionnel pour un effet arrondi */
+}
+
+.custom-banner h2 {
+  font-size: 1.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.banner-icon {
+  position: absolute;
+  top: -20px;
+  right: -60px;
+  width: 90px;
+  height: auto;
+}
+
+ /*section programmes*/
+
+
+.programme-section {
+  background-color: white;
+  padding: 50px 20px;
+  text-align: center;
+   
+}
+
+
+.programme-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f6cec7;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+.programme-img {
+
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+  
+.programme-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 15px 0 5px;
+color: white;
+font-family: 'montserrat';
+
+}
+.conteneur-texte {
+  text-align: center; /* centre le h2 à l’intérieur */
+}
+
+.texte {
+  display: inline-block;         /* réduit le fond à la taille du texte */
+  background-color: #f9ccc7;     /* fond rose */
+  padding: 10px 20px;            /* espace autour du texte */
+  border-radius: 12px;           /* coins arrondis */
+  font-size: 24px;
+  color: #4a3b28;
+  line-height: 1.4;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  margin: 0 auto;                /* sécurité : centre si jamais utilisé autrement */
+  text-align: center;            /* centre le texte à l’intérieur du bloc */
+}
+.texte-seance{
+  padding: 20px;
+}
+.programme-role {
+  font-weight: bold;
+    color: #5f5143;
+}
+
+
+.white{
+  color: white;
+}
+.programme-desc {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  color: #5f5143;
+   font-family: 'montserrat';
+}
+
+.btn-activite {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color:white;
+}
+
+.white-btn {
+ background-color:white;
+  color: #5f5143;
+   font-family: 'montserrat';
+}
+.card-endo{
+   background: #f6cec7;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.progamme-endo{
+  
+ display: block;
+  margin: 0 auto;            /* centre horizontalement dans le conteneur */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;         /* garde les proportions et remplit */
+  object-position: center;   /* centre le contenu dans l'image */
+  border-radius: 10px;
+}
+
+/* Section format pratique*/
+.format-section {
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+ 
+   
+}
+
+
+.format-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.f-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.format-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+  
+.format-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 15px 0 5px;
+  font-family: 'montserrat';
+color: #5f5143;
+
+
+}
+
+
+
+
+/*.icon-circle-arrow {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #777;
+}
+
+.icon-circle-arrow::before {
+  content: "›"; /* ou → selon le style 
+  font-weight: bold;
+}*/
+
+
+.btn-format {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #5f5143;;
+}
+
+.green-btn {
+ background-color:#DDE5B6;
+  color: #5f5143;
+  font-family: 'montserrat';
+}
+
+.pink-btn {
+background-color: #facec7;
+ color: #5f5143;
+ font-family: 'mserrat';
+}
+
+// Video programme
+
+
+.video-section {
+  background: url('/assets/PROGRAMMEVIDEO.gif') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #2c3e50;
+
+  .overlay {
+    background-color: #f7f8f7b7;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 700px;
+  }
+  .btn-group {
+     display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #597D5E;
+    margin-bottom: 1rem;
+    font-family: 'montserrat';
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #597D5E;
+    margin-bottom: 2rem;
+     font-family: 'montserrat';
+  }
+
+  
+    .btn {
+      padding: 15px 24px;
+      border-radius: 25px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+
+      &.btn-light {
+        background-color: white;
+        color: #597D5E;
+         font-family: 'montserrat';
+      }
+
+      &.btn-outline {
+        background: transparent;
+        border: 2px solid #597D5E;
+        color: #597D5E;
+         font-family: 'montserrat';
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+

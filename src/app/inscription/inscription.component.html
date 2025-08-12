@@ -1,0 +1,98 @@
+<div class="multi-step-form">
+  <!-- Image à gauche selon l'étape -->
+
+<!-- Colonne image avec texte -->
+  <!--<div class="image-side d-none d-md-block">
+    <img *ngIf="step === 1" src="assets/inscrireimage1.png" alt="Image Étape 1" />
+    <img *ngIf="step === 2" src="assets/inscrireimage2.png" alt="Image Étape 2" />
+  </div>-->
+  <!-- Formulaire à droite -->
+  <div class="form-wrapper">
+    <!-- Étape 1 : Infos utilisateur -->
+    <div *ngIf="step === 1" class="form-step">
+      <h2>Créer un compte</h2>
+      <p>Commencez votre aventure… bébé l’a déjà fait, à votre tour !</p>
+
+      <div class="form-group">
+        <label>
+          <input type="radio" name="type" [(ngModel)]="account.type" value="utilisatrice" required />
+          Utilisatrice
+        </label>
+        <label>
+          <input type="radio" name="type" [(ngModel)]="account.type" value="entreprise" required />
+          Entreprise
+        </label>
+      </div>
+
+      <input type="text" placeholder="Entreprise" [(ngModel)]="formData.entreprise" />
+
+      <div class="form-row">
+        <input type="text" placeholder="Prénom" [(ngModel)]="formData.prenom" />
+        <input type="text" placeholder="Nom" [(ngModel)]="formData.nom" />
+      </div>
+
+      <input type="email" placeholder="Adresse mail" [(ngModel)]="formData.email" />
+      <input type="password" placeholder="Mot de passe" [(ngModel)]="formData.password" />
+      <small class="password-hint">
+        • Au moins 8 caractères • Un chiffre • Une majuscule • Un caractère spécial
+      </small>
+      <input type="password" placeholder="Confirmer le mot de passe" [(ngModel)]="formData.confirmPassword" />
+
+      <label class="checkbox">
+        <input type="checkbox" [(ngModel)]="formData.accepted" />
+        J’accepte les <a href="#">J’accepte les conditions d’utilisation et la politique de confidentialité</a>
+      </label>
+
+      <button (click)="nextStep()">Suivant</button>
+    </div>
+
+    <!-- Étape 2 : Préférences -->
+    <div *ngIf="step === 2" class="form-step">
+      <h3>Actuellement, êtes-vous enceinte ou avez-vous accouché récemment ?</h3>
+      <label>
+        <input type="radio" name="enceinte" [(ngModel)]="formData.enceinte" value="oui" /> Oui
+      </label>
+      <label>
+        <input type="radio" name="enceinte" [(ngModel)]="formData.enceinte" value="non" /> Non
+      </label>
+
+      <h4>Vos sports préférés :</h4>
+      <div class="chips">
+        <button *ngFor="let sport of sports" (click)="toggleSelect('sports', sport)" [class.selected]="formData.sports.includes(sport)">
+          {{ sport }}
+        </button>
+      </div>
+        
+      <h4>Fréquence d’activité :</h4>
+      <div class="chips">
+        <button *ngFor="let freq of frequences" (click)="formData.frequence = freq" [class.selected]="formData.frequence === freq">
+          {{ freq }}
+        </button>
+      </div>
+
+      <h4>Vos objectifs :</h4>
+      <div class="chips">
+        <button *ngFor="let obj of objectifs" (click)="toggleSelect('objectifs', obj)" [class.selected]="formData.objectifs.includes(obj)">
+          {{ obj }}
+        </button>
+      </div>
+
+      <button (click)="prevStep()">Retour</button>
+      <button (click)="nextStep()">Suivant</button>
+    </div>
+
+    <!-- Étape 3 : Confirmation -->
+    <div *ngIf="step === 3" class="form-step">
+      <h2>Confirmation</h2>
+      <p><strong>Nom :</strong> {{ formData.nom }} {{ formData.prenom }}</p>
+      <p><strong>Email :</strong> {{ formData.email }}</p>
+      <p><strong>Sports :</strong> {{ formData.sports.join(', ') }}</p>
+      <p><strong>Fréquence :</strong> {{ formData.frequence }}</p>
+      <p><strong>Objectifs :</strong> {{ formData.objectifs.join(', ') }}</p>
+
+      <button (click)="prevStep()">Retour</button>
+      <button (click)="submitForm()">S’enregistrer</button>
+    </div>
+  </div>
+</div>
+

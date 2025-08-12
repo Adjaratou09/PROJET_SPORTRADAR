@@ -1,0 +1,63 @@
+<section class="contact-section">
+  <div class="contact-wrapper">
+    <!-- COLONNE GAUCHE -->
+    <div class="left">
+      <h2>Une question ? Un besoin ? Parlons-fr !</h2>
+      <p>
+        Que vous soyez enceinte jusqu'au cou, fraîchement maman les yeux mi-ouverts,<br>
+        ou en pleine mission récupération du périnée perdu, notre équipe est là pour vous !<br>
+        On vous écoute, on vous conseille, on vous répond (même entre deux biberons).
+      </p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/me/" target="_blank" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+          <i class="bi bi-tiktok"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- COLONNE DROITE -->
+    <div class="right">
+      <div class="form-card">
+        <h1>Contactez-nous</h1>
+        <form #form="ngForm" (ngSubmit)="onSubmit()" novalidate>
+          <input type="hidden" name="access_key" [value]="accessKey" />
+          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+          <input type="checkbox" name="botcheck" style="display: none;" />
+
+          <label for="name">Nom complet*</label>
+          <input type="text" name="name" id="name" [(ngModel)]="user.name" required  #nameRef="ngModel" />
+
+            <div *ngIf="nameRef.invalid && nameRef.touched" class="error-message">
+                    Le nom est requis.
+           </div>
+
+          <label for="email">Adresse Email*</label>
+          <input type="email" name="email" id="email" [(ngModel)]="user.email" required #emailRef="ngModel"/>
+          <div *ngIf="emailRef.invalid && emailRef.touched" class="error-message">
+                  adresse email valide est requise.
+    </div>
+
+          <label for="phone">Téléphone*</label>
+          <input type="text" name="phone" id="phone" [(ngModel)]="user.phone" required #phoneRef="ngModel"/>
+           <div *ngIf="phoneRef.invalid && phoneRef.touched" class="error-message">
+                Le numéro de téléphone est requis.
+    </div>
+
+          <label for="message">Votre Message*</label>
+          <textarea name="message" id="message" rows="5" [(ngModel)]="user.message" required  #messageRef="ngModel"></textarea>
+                 <div *ngIf="messageRef.invalid && messageRef.touched" class="error-message">
+                    Le message est requis.
+                 </div>
+          <button type="submit" [disabled]="form.invalid">Envoyer Message</button>
+          <p class="message-info" #resultRef></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,13 +1,44 @@
+import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
+import { AuthService } from '../services/auth.service'; // chemin à adapter selon ton projet
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+@Component({
+    selector: 'app-login',
+  imports: [RouterLink, FormsModule, CommonModule],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'], 
+})
+export class LoginComponent {
+  email: string = '';
+  password: string = '';
+  errorMessage: string = '';
+  auth: any;
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+  // login.component.ts
+async login() {
+  try {
+    await this.auth.login(this.email, this.password);
+    this.router.navigate(['/']); // navigation dans le composant, pas dans le service
+  } catch (err: any) {
+    this.errorMessage = err?.message ?? 'Erreur de connexion';
+  }
+}
+
+}
+
+/*import { Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, CommonModule],
+  imports: [RouterLink, FormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'], // Corrected styleUrls
 })
@@ -21,7 +52,7 @@ throw new Error('Method not implemented.');
   errorMessage?: string;
   successMessage?: string;
 
-  constructor(private router: Router) {}
+  constructor() {}
  
 
   
@@ -36,4 +67,7 @@ throw new Error('Method not implemented.');
   //     .then(() => alert('Un lien de réinitialisation de mot de passe a été envoyé à votre adresse email.'))
   //     .catch(e => alert('Une erreur s\'est produite : ' + e.message));
   // }
+//}
 }
+
+} */

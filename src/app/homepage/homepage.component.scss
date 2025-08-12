@@ -1,0 +1,372 @@
+/* Style général du carousel */
+#carouselExampleDark {
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+/* Style des images */
+.carousel-inner img {
+  object-fit: cover;
+  height: 70vh;
+}
+
+/* Texte sur l'image */
+ 
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  //text-shadow: 1px 1px 3px #000;
+  font-family: 'League spartan' ;
+  text-align: left;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: #f8f9fa;
+}
+
+/* Boutons */
+.carousel-caption .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Indicateurs */
+.carousel-indicators button {
+  background-color: #fff;
+}
+
+/* Contrôles précédent/suivant */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+  }
+}
+h1{
+  color: white;
+  font-family: 'League spartan' ;
+
+}
+p{
+  text-align: center;
+  color: #5f5143;
+}
+// APRES CAROUSSELL
+
+ .custom-badge {
+      background-color: #cfe1b9;
+      color: #ffffff;
+      border-radius: 2rem;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      display: inline-flex;
+      align-items: center;
+    }
+    .custom-badge svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 0.5rem;
+      fill: white;
+    }
+    .badge-container {
+      gap: 1rem;
+      padding: 50px;
+    }
+    .subtitle {
+      color: #5C4433;
+      font-weight: bold;
+      font-size: 1.6rem;
+      height: 90px;
+    }
+
+// Les profils
+
+
+
+.avatar-group {
+  display: flex;
+  margin-right: 0.5rem;
+ align-items: center;
+
+ 
+}
+
+.avatar {
+  width: 920px;
+  height: 300px;
+ 
+   align-items: center;
+  padding-left: -5px;
+  object-fit: cover;
+  
+ text-align: center;
+}
+
+.text-muted {
+   width: 500px;
+  height: 200px;
+  font-size: 1.5rem;
+  color: #5F5143;
+  margin-left: -230px;
+  font-family: 'Montserrat';
+  
+
+}
+.card-title{
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+}
+
+// EXPERTE
+
+.expert-section {
+  background-color: #eaf3e4;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.expert-title {
+  font-family: 'League Spartan', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #5f5143;
+}
+
+.expert-subtitle {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #5f5143;
+}
+
+.expert-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.expert-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.expert-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 15px 0 5px;
+color: #5f5143;
+
+}
+
+.expert-role {
+  font-weight: bold;
+    color: #5f5143;
+}
+
+.green {
+  color: #688868;
+}
+
+.pink {
+  color: #fabec0;
+}
+
+.expert-desc {
+  font-size: 0.95rem;
+  margin: 10px 0 20px;
+  color: #5f5143;
+}
+
+.btn-contact {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #688868;
+}
+
+.green-btn {
+ background-color: #bfd8bd;
+  color: #5f5143;
+}
+
+.pink-btn {
+background-color:  #fabec0;;
+ color: #5f5143;
+}
+
+
+// le boutton programme
+.btn-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  margin-top: 20px; /* Optionnel */
+}
+
+.btn-programme {
+  background-color: #d9ffcc;
+  color: #4b3d2a;
+  border: 1px solid #4b3d2a;
+  border-radius: 40px;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none; /* Enlève le soulignement */
+  transition: background-color 0.3s ease;
+}
+
+.btn-programme:hover {
+  background-color: #c3f7b5;
+}
+
+// Sectio visuel
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+.left-infos {
+    flex: 1;
+    min-width: 200px;
+
+    .info-item {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.2rem;
+      color: #6a3e2e;
+  
+      .icon {
+        width: 60px;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+.image-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 260px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Barre colorée en haut */
+.image-wrapper.top-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 100%;
+  background-color: #f8a9b8; /* Rose pastel */
+  z-index: 1;
+}
+
+/* Barre colorée en bas */
+.image-wrapper.bottom-bar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 35px;
+  width: 100%;
+  background-color: #b8f8c6; /* Vert pastel */
+  z-index: 1;
+}
+}
+// section blog
+.blog-section {
+  background-image: url('/assets/Femme/APPELACTION.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-section .overlay {
+  text-align: center;
+  color: white;
+  //background-color: rgba(0, 0, 0, 0.4); /* léger voile pour lisibilité */
+  padding: 90px 50px;
+  border-radius: 10px;
+}
+
+
+
+.blog-section h2 {
+  font-size: 24px;
+  font-weight: 900;
+  height: 20px;
+  padding: 80px;
+}
+
+.blog-button {
+  background-color: white;
+  color: #f6cec7;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+}
+

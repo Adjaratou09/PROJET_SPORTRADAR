@@ -1,0 +1,57 @@
+
+/*.image-side {
+  flex: 1;
+  background-image: url('/assets/inscrireimage1.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}*/
+.multi-step-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+
+  .form-step {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input, button {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    input {
+      flex: 1;
+    }
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 0.5rem;
+
+    button {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      background: #eee;
+      border: none;
+      cursor: pointer;
+
+      &.selected {
+        background: #b5d8ac;
+        font-weight: bold;
+      }
+    }
+  }
+}
