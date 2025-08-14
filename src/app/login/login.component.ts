@@ -1,34 +1,29 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 import { Router, RouterLink } from '@angular/router';
-import { AuthService } from '../services/auth.service'; // chemin à adapter selon ton projet
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-login',
+selector: 'app-login',
   imports: [RouterLink, FormsModule, CommonModule],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'], 
+  styleUrls: ['./login.component.scss'], // Corrected styleUrls
 })
 export class LoginComponent {
-  email: string = '';
-  password: string = '';
-  errorMessage: string = '';
-  auth: any;
+  email = '';
+  password = '';
+  errorMessage = '';
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  // login.component.ts
-async login() {
-  try {
-    await this.auth.login(this.email, this.password);
-    this.router.navigate(['/']); // navigation dans le composant, pas dans le service
-  } catch (err: any) {
-    this.errorMessage = err?.message ?? 'Erreur de connexion';
+  login() {
+    this.authService.login(this.email, this.password)
+  .then(() => this.router.navigate(['/']))
+  .catch((err: { message: string; }) => this.errorMessage = err.message);
   }
 }
 
-}
 
 /*import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';

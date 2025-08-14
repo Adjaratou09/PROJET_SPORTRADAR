@@ -1,51 +1,75 @@
 /*import { Injectable } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  user$: any;
+
+  constructor(
+    private afAuth: AngularFireAuth,
+    private firestore: AngularFirestore,
+    private router: Router
+  ) {}
+
+  // Connexion utilisateur
   login(email: string, password: string) {
-    throw new Error('Method not implemented.');
+    return this.afAuth.signInWithEmailAndPassword(email, password);
   }
 
-  constructor() { }
-}
-import { Injectable } from '@angular/core';
-import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class AuthService {
-  constructor(private auth: Auth) {}
-
-  login(email: string, password: string) {
-    // Retourner la promesse ici !
-    return signInWithEmailAndPassword(this.auth, email, password);
+  // Déconnexion
+  logout() {
+    return this.afAuth.signOut().then(() => {
+      this.router.navigate(['/login']);
+    });
   }
-}*/
-// auth.service.ts
+
+  // Enregistrement de données utilisateur
+  saveUserData(uid: string, data: any) {
+    return this.firestore.collection('users').doc(uid).set(data);
+  }
+ }*/
+
+  // src/app/services/auth.service.ts
 import { Injectable, inject } from '@angular/core';
-import { Auth, user, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, GoogleAuthProvider, signInWithPopup, User } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+
+import {
+  Auth, User, authState,
+  signInWithEmailAndPassword, signOut
+} from '@angular/fire/auth';
+
+import {
+  Firestore, doc, setDoc
+} from '@angular/fire/firestore';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private auth = inject(Auth);
-  user$: Observable<User | null> = user(this.auth);
+  private firestore = inject(Firestore);
+  private router = inject(Router);
 
+  // Flux utilisateur (remplace afAuth.authState)
+  user$: Observable<User | null> = authState(this.auth);
+
+  // Connexion
   login(email: string, password: string) {
-    return signInWithEmailAndPassword(this.auth, email, password); // Promise
+    return signInWithEmailAndPassword(this.auth, email, password);
   }
-  register(email: string, password: string) {
-    return createUserWithEmailAndPassword(this.auth, email, password);
+
+  // Déconnexion
+  async logout() {
+    await signOut(this.auth);
+    await this.router.navigate(['/login']);
   }
-  loginWithGoogle() {
-    return signInWithPopup(this.auth, new GoogleAuthProvider());
-  }
-  logout() {
-    return signOut(this.auth);
+
+  // Enregistrement de données utilisateur (equiv. .collection('users').doc(uid).set)
+  saveUserData(uid: string, data: any) {
+    const ref = doc(this.firestore, `users/${uid}`);
+    return setDoc(ref, data, { merge: true });
   }
 }
-
-

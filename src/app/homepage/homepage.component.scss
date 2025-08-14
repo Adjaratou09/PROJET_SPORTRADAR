@@ -79,7 +79,7 @@ p{
 // APRES CAROUSSELL
 
  .custom-badge {
-      background-color: #cfe1b9;
+      background-color: #597D5E;
       color: #ffffff;
       border-radius: 2rem;
       font-weight: 700;
@@ -308,7 +308,7 @@ background-color:  #fabec0;;
 }
 
 /* Barre colorée en haut */
-.image-wrapper.top-bar::before {
+.image-wrapper.top-bar1::before {
   content: '';
   position: absolute;
   top: 0;
@@ -318,16 +318,26 @@ background-color:  #fabec0;;
   background-color: #f8a9b8; /* Rose pastel */
   z-index: 1;
 }
+.image-wrapper.top-bar3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 100%;
+  background-color:#DDE5B6; /* Rose pastel */
+  z-index: 1;
+}
 
 /* Barre colorée en bas */
-.image-wrapper.bottom-bar::after {
+.image-wrapper.bottom-bar2::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   height: 35px;
   width: 100%;
-  background-color: #b8f8c6; /* Vert pastel */
+  background-color: #DBFEB8; /* Vert pastel */
   z-index: 1;
 }
 }
@@ -362,7 +372,7 @@ background-color:  #fabec0;;
 
 .blog-button {
   background-color: white;
-  color: #f6cec7;
+  color: #5F5143;
   font-weight: bold;
   padding: 15px 40px;
   border-radius: 30px;
