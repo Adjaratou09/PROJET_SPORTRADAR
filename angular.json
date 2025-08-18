@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/sport-radar",
+            "outputPath": "dist/ias-b3-elearning-g4-sportradar",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [

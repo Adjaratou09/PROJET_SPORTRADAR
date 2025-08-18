@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "dist/sport-radar/browser",
+    "public": "dist/ias-b3-elearning-g4-sportradar/browser",
+
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -136,10 +136,10 @@
 .btn-pink {
   background-color:white;
   border: none;
-  color: #f6cec7;
+  color: #5f5143;
   padding: 0.7rem 1.5rem;
   border-radius: 2rem;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -149,7 +149,7 @@
   border: none;
   padding: 0.7rem 1.5rem;
   border-radius: 2rem;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -237,6 +237,7 @@
 .mission-left {
   flex: 1 1 30%;
   color: #5F5143;
+
 }
 
 .mission-left h2 {
@@ -245,7 +246,8 @@
   margin-bottom: 2rem;
  
   //font-family: 'Mission Script', cursive;
- font-family: 'Dancing Script', cursive;
+ font-family: 'Bellaboo', cursive;
+ font-size: 45px;
 
 }
 
@@ -255,12 +257,13 @@
 }
 
 .mission-left p {
-   font-size: 1.3rem;
-  line-height: 1.9;
+   font-size: 25px;
+  line-height: 1.3;
+  font-family: 'Montserrat';
 }
 
 .mission-icons {
-  margin-top: 6rem;
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -308,7 +311,6 @@ padding-right: 1rem;
  
   padding: 1rem 1.5rem;
   border-radius: 10px;
- 
   width: 900px;
   max-width: 900px;
   text-align: left;
@@ -316,9 +318,9 @@ padding-right: 1rem;
 
 .mission-right-text p {
   margin: 0.6rem 0;
-  line-height: 1.5;
+  line-height: 1.2;
   color: #5F5143;
-  font-size: 1.3rem
+  font-size: 25px
 }
 // SECTION POUR QUI
 .pour-qui-section {
@@ -343,23 +345,23 @@ padding-right: 1rem;
   width: 100%;           /* prend toute la largeur disponible */
   max-width: 500px;      /* augmente la taille maximale */
   object-fit: cover;
-  margin-bottom: 1.5rem;
+  margin-bottom: 16px;
 }
 
     .text-right {
       flex: 1 1 55%;
       h2 {
         font-style: italic;
-        font-size: 2rem;
-         margin-bottom: 2rem;
+        font-size: 45px;
+         margin-top: -350px;
         color: #5F5143;
-        font-family: 'Dancing Script', cursive;
+        font-family: 'Bellaboo', cursive;
       }
 
       p {
-        margin-bottom: 0.8rem;
-        line-height: 1.5rem;
-        font-size: 1.3rem;
+        //margin-top: -200px;
+       // line-height: 1.5rem;
+        font-size: 25px;
         color: #5F5143;
         font-family: 'Montserrat';
       }

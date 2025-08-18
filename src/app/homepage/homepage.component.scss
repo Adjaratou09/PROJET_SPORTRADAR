@@ -1,16 +1,16 @@
-/* Style général du carousel */
+/* Style général du carousel 
 #carouselExampleDark {
   max-height: 70vh;
   overflow: hidden;
 }
 
-/* Style des images */
+/* Style des images
 .carousel-inner img {
   object-fit: cover;
   height: 70vh;
 }
 
-/* Texte sur l'image */
+/* Texte sur l'image 
  
 
 .carousel-caption h1 {
@@ -27,7 +27,7 @@
   color: #f8f9fa;
 }
 
-/* Boutons */
+/* Boutons 
 .carousel-caption .btn {
   font-size: 1rem;
   padding: 10px 20px;
@@ -40,19 +40,19 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
-/* Indicateurs */
+/* Indicateurs 
 .carousel-indicators button {
   background-color: #fff;
 }
 
-/* Contrôles précédent/suivant */
+/* Contrôles précédent/suivant 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
 }
 
-/* Responsive */
+/* Responsive 
 @media (max-width: 768px) {
   .carousel-caption {
     font-size: 0.9rem;
@@ -117,7 +117,7 @@ p{
 }
 
 .avatar {
-  width: 920px;
+  width: 900px;
   height: 300px;
  
    align-items: center;
@@ -130,8 +130,8 @@ p{
 .text-muted {
    width: 500px;
   height: 200px;
-  font-size: 1.5rem;
-  color: #5F5143;
+  font-size: 16px;
+  color: #5f5143;
   margin-left: -230px;
   font-family: 'Montserrat';
   
@@ -146,14 +146,14 @@ p{
 // EXPERTE
 
 .expert-section {
-  background-color: #eaf3e4;
+  background-color: #cfe1b9;
   padding: 50px 20px;
   text-align: center;
 }
 
 .expert-title {
-  font-family: 'League Spartan', cursive;
-  font-size: 2.5rem;
+  font-family: 'BELLABOO', cursive;
+  font-size: 75px;
   margin-bottom: 0.5rem;
   text-align: center;
   color: #5f5143;
@@ -161,9 +161,10 @@ p{
 
 .expert-subtitle {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 25px;
   margin-bottom: 2rem;
   color: #5f5143;
+  font-family: 'League Spartan';
 }
 
 .expert-cards {
@@ -190,10 +191,11 @@ p{
 }
 
 .expert-name {
-  font-size: 1.3rem;
+  font-size: 16px;
   font-weight: bold;
   margin: 15px 0 5px;
 color: #5f5143;
+font-family: 'Montserrat';
 
 }
 
@@ -239,8 +241,8 @@ background-color:  #fabec0;;
 // le boutton programme
 .btn-container {
   display: flex;
-  justify-content: center; /* Centre horizontalement */
-  margin-top: 20px; /* Optionnel */
+  justify-content: center; /* Centre horizontalement 
+  margin-top: 20px; /* Optionnel 
 }
 
 .btn-programme {
@@ -251,7 +253,7 @@ background-color:  #fabec0;;
   padding: 10px 25px;
   font-size: 1.1rem;
   font-weight: 500;
-  text-decoration: none; /* Enlève le soulignement */
+  text-decoration: none; /* Enlève le soulignement 
   transition: background-color 0.3s ease;
 }
 
@@ -307,7 +309,7 @@ background-color:  #fabec0;;
   border-radius: 10px;
 }
 
-/* Barre colorée en haut */
+/* Barre colorée en haut 
 .image-wrapper.top-bar1::before {
   content: '';
   position: absolute;
@@ -315,7 +317,7 @@ background-color:  #fabec0;;
   left: 0;
   height: 35px;
   width: 100%;
-  background-color: #f8a9b8; /* Rose pastel */
+  background-color: #f8a9b8; /* Rose pastel 
   z-index: 1;
 }
 .image-wrapper.top-bar3::before {
@@ -325,11 +327,11 @@ background-color:  #fabec0;;
   left: 0;
   height: 35px;
   width: 100%;
-  background-color:#DDE5B6; /* Rose pastel */
+  background-color:#DDE5B6; /* Rose pastel 
   z-index: 1;
 }
 
-/* Barre colorée en bas */
+/* Barre colorée en bas 
 .image-wrapper.bottom-bar2::after {
   content: '';
   position: absolute;
@@ -337,7 +339,7 @@ background-color:  #fabec0;;
   left: 0;
   height: 35px;
   width: 100%;
-  background-color: #DBFEB8; /* Vert pastel */
+  background-color: #DBFEB8; /* Vert pastel 
   z-index: 1;
 }
 }
@@ -357,7 +359,7 @@ background-color:  #fabec0;;
   text-align: center;
   color: white;
   //background-color: rgba(0, 0, 0, 0.4); /* léger voile pour lisibilité */
-  padding: 90px 50px;
+  /*padding: 90px 50px;
   border-radius: 10px;
 }
 
@@ -378,5 +380,336 @@ background-color:  #fabec0;;
   border-radius: 30px;
   text-decoration: none;
   font-size: 16px;
+}*/
+
+/* ========= Variables de breakpoints ========= */
+$bp-sm: 576px;
+$bp-md: 768px;   // tablette
+$bp-lg: 992px;   // desktop
+
+/* ========= Base responsive ========= */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+img, video { max-width: 100%; height: auto; display:block; }
+
+body { line-height: 1.5; font-size: clamp(14px, 1.6vw, 16px); }
+
+h1{
+  color: white;
+  font-family: 'League spartan';
 }
+p{
+  text-align: center;
+  color: #5f5143;
+}
+
+/* ========= CAROUSEL ========= */
+#carouselExampleDark{
+  max-height: none;  // évite la coupe sur petits écrans
+  overflow: hidden;
+}
+
+.carousel-inner img{
+  object-fit: cover;
+  height: clamp(48vh, 62vh, 70vh);   // mobile -> desktop
+  width: 100%;
+}
+
+/* Caption : plus lisible sur mobile */
+.carousel-caption{
+  inset-inline: clamp(8px, 4vw, 48px);
+  bottom: clamp(8px, 3vw, 24px);
+  text-align: left;
+
+  h1{
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  p{
+    font-size: clamp(.95rem, 2.3vw, 1.2rem);
+    color: #597d5e;
+    text-align: center;
+  }
+
+  .btn{
+    font-size: clamp(.9rem, 2vw, 1rem);
+    padding: .6rem 1.25rem;
+    border-radius: 30px;
+    
+
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(255,255,255,.6);
+    }
+  }
+}
+
+/* Indicateurs + contrôles (ok) */
+.carousel-indicators button{ background-color:#fff; }
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  color: #5F5143;
+ 
+}
+
+/* ========= APRÈS CAROUSEL ========= */
+.badge-container{
+  display:flex; 
+  flex-wrap:wrap;
+   justify-content:center; 
+   align-items:center;
+  gap: clamp(.5rem, 2vw, 1rem);
+  padding: clamp(12px, 6vw, 50px);
+}
+
+.custom-badge{
+  background-color:#597D5E;
+   color:#fff; 
+   border-radius:2rem;
+    font-weight:700;
+  padding: .5rem 1rem; 
+  display:inline-flex; 
+  align-items:center;
+   gap:.5rem;
+
+  svg{ width:18px;
+     height:18px; 
+     fill:#fff; }
+}
+
+.subtitle{
+  color:#5C4433;
+   font-weight:700;
+  font-size: clamp(1.05rem, 3.5vw, 1.6rem);
+  margin: .25rem auto 1.25rem;   // supprime height fixe
+  height: auto;
+  text-align: center;
+  max-width: 70ch;
+}
+
+/* ========= PROFILS ========= */
+.avatar-group{
+  display:flex; 
+  align-items:center;
+   justify-content:center;
+    gap:.75rem; flex-wrap:wrap;
+}
+
+.avatar{
+  width: min(100%, 560px);
+  height: auto;
+  object-fit: cover;
+  margin-inline:auto;
+}
+.text-center{
+  background-color:#dbfeb8;
+  display: inline-flex;
+  text-align: center;
+}
+
+
+.text-muted{
+  width: auto; 
+  height: auto;
+   margin: 0;
+  font-size: 25px;
+  color:#5f5143;
+   font-family:'Montserrat';
+  text-align:center;
+}
+.btn-custom {
+  display: inline-block;
+  background-color: #eafed6; /* vert clair */
+  color: #5F5143; /* texte foncé */
+  border: 1px solid #333; /* contour */
+  padding: 8px 20px; /* espace interne */
+  border-radius: 50px; /* forme pilule */
+  text-decoration: none; /* enlever le soulignement */
+  font-size: 25 px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #b3ffb3; /* un peu plus foncé au survol */
+  
+}
+
+/* ========= CARTES (expertes + autres) ========= */
+.card-title{
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  font-weight: bold;
+}
+
+.expert-section{
+  background-color:#cfe1b9;
+  padding: clamp(24px, 6vw, 50px) clamp(16px, 4vw, 20px);
+  text-align:center;
+}
+
+.expert-title{
+  font-family:'BELLABOO', cursive;
+  font-size: clamp(2rem, 8vw, 4.2rem);
+  margin-bottom:.5rem; 
+  text-align:center;
+   color:#5f5143;
+}
+
+.expert-subtitle{
+  font-weight:700; 
+  color:#5f5143; 
+  font-family:'League Spartan';
+  font-size: clamp(1rem, 3.2vw, 1.4rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.expert-cards{
+  display:grid; gap: clamp(12px, 2.5vw, 30px);
+  grid-template-columns: 1fr;
+  justify-items:center;
+
+  @media (min-width: $bp-sm){ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: $bp-lg){ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.card{
+  background:#fff;
+   border-radius:15px; padding:20px;
+  width: min(100%, 320px);
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
+  text-align:center;
+}
+
+.expert-img{
+  border-radius:10px;
+   width:100%; 
+   height: clamp(180px, 28vw, 200px); 
+   object-fit:cover;
+}
+
+.expert-name{
+  font-size: 1rem; 
+  font-weight:700;
+   margin: 12px 0 4px; 
+   color:#5f5143; 
+   font-family:'Montserrat';
+}
+
+.expert-role{ 
+  font-weight:700; 
+  color:#5f5143; }
+.green{ color:#688868; }
+.pink{ color:#fabec0; }
+
+.expert-desc{
+  font-size: .95rem; margin: 10px 0 16px; color:#5f5143;
+}
+
+.btn-contact{
+  border:0; border-radius:10px; padding:8px 16px; font-weight:700; cursor:pointer; background:#688868;
+}
+.green-btn{ background:#bfd8bd; color:#5f5143; }
+.pink-btn{ background:#fabec0; color:#5f5143; }
+
+/* ========= BOUTON PROGRAMMES ========= */
+.btn-container{
+  display:flex; justify-content:center; margin-top: 20px;
+}
+.btn-programme{
+  background:#d9ffcc; color:#4b3d2a; border:1px solid #4b3d2a; border-radius:40px;
+  padding: .6rem 1.25rem; font-size: clamp(1rem, 2.4vw, 1.1rem); font-weight:500; text-decoration:none;
+  transition: background-color .3s ease;
+  &:hover{ background:#c3f7b5; }
+}
+
+/* ========= SECTION VISUEL ========= */
+.features-container{
+  display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center;
+  padding: clamp(1rem, 4vw, 2rem); gap: clamp(1rem, 3vw, 2rem);
+
+  .left-infos{
+    flex: 1 1 240px; min-width: 200px;
+
+    .info-item{
+      text-align:center; margin-bottom: 1.25rem;
+      font-family:'Dancing Script', cursive; font-size: clamp(1rem, 2.6vw, 1.2rem); color:#6a3e2e;
+
+      .icon{ width: clamp(44px, 8vw, 60px); margin-top:.5rem; }
+    }
+  }
+
+  .image-grid{
+    display: grid; gap: 10px; justify-items:center; align-items:start;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media (max-width: $bp-md){
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media (max-width: 420px){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .image-wrapper{
+    position:relative; width: min(100%, 260px); height:auto; border-radius:10px; overflow:hidden;
+
+    img{ width:100%; display:block; border-radius:10px; }
+
+    &.top-bar1::before,
+    &.top-bar3::before{
+      content:''; position:absolute; top:0; left:0; height: 28px; width:100%; z-index:1;
+    }
+    &.top-bar1::before{ background:#f8a9b8; }
+    &.top-bar3::before{ background:#DDE5B6; }
+
+    &.bottom-bar2::after{
+      content:''; position:absolute; bottom:0; left:0; height:28px; width:100%; background:#DBFEB8; z-index:1;
+    }
+  }
+}
+
+/* ========= BLOG ========= */
+.blog-section{
+  background-image:url('/assets/Femme/APPELACTION.png');
+  background-size:cover; 
+  background-position:center; 
+  position:relative;
+  min-height: clamp(320px, 55vh, 520px);   // remplace height:500px
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+
+  .overlay{
+    text-align:center;
+     color:#fff;
+    padding:50 px;
+    border-radius:10 px;
+  }
+
+  h2{
+    font-size: 16px;
+    font-weight: 900;
+    padding: 30px;       // enlève le gros padding fixe
+    margin-bottom: clamp(.75rem, 2.5vw, 1.25rem);
+    height: auto;
+  }
+
+  .blog-button{
+    background:#fff; color:#5F5143; font-weight:700;
+    padding: .8rem 1.6rem; border-radius:30px; text-decoration:none; font-size: clamp(.95rem, 2.4vw, 1rem);
+  }
+}
+
+/* ========= Ajustements spécifiques tablettes / desktop ========= */
+@media (min-width: $bp-md){
+  .carousel-caption{ max-width: 80%; }
+}
+
+@media (min-width: $bp-lg){
+  .carousel-caption{ max-width: 70%; }
+}
+
 
