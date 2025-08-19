@@ -564,6 +564,17 @@ padding-right: 1rem;
     right: 400px;
     
   }
+  
+}
+.texte-footer {
+  position: absolute;
+  bottom: 60px; /* espace avec le bas */
+  left: 30%;
+  transform: translateX(-50%);
+  font-size: 45px;
+  font-weight: 400;
+  color: #5f5143;
+  font-family: 'Bellaboo', cursive; /* pour un style manuscrit */
 }
 
 

@@ -10,13 +10,15 @@
    .title {
   display: inline-block;
   background-color: white;
-  color: #C6D8B4; // un vert doux, tu peux ajuster
+  color: #597d5e; 
   text-align: center;
-  font-size: 2rem;
+  font-size: 30px;
   padding: 0.2rem 1rem;
   border-radius: 12px;
   margin-top: 9rem;
-  box-shadow: 0 0 0 2px #C6D8B4; // optionnel : bordure douce
+  font-family: 'League Spartan';
+  font-weight: bold;
+
       
     }
   
@@ -54,18 +56,23 @@ form {
 
   input {
     padding: 0.5rem;
-    border: 1px solid #615e5f;
+   // border: 1px solid #615e5f;
     border-radius: 8px;
-    outline: none;
     
+    
+    .text{
+      color: #89ba6e;
+    }
    
   }
 }
 
 .checkbox-row {
-  font-size: 1.2rem;
+  font-size: 16px;
   display: flex;
   align-items: center;
+  color: #5F5143;
+  font-weight: bold;
 
   
 
@@ -82,17 +89,14 @@ form {
   
 
   button {
-    background-color: #BFD8BD;
+     background-color: #d4f5d1;
     padding: 0.6rem 2rem;
     border: none;
     border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
 
-    &:hover {
-      background-color: #89ba6e;
-      
-    }
+   
   }
 }
 
@@ -126,17 +130,18 @@ html {
   }
 
   .btn-connect {
-    background-color: #BFD8BD;
+    background-color: #bfd8bd;
     padding: 0.5rem 1.2rem;
     border-radius: 25px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    color: #5F5143;
+    //transition: background-color 0.3s ease;
 
-    &:hover {
+   /* &:hover {
       background-color: #89ba6e;
-    }
+    }*/
   }
 }
 
@@ -197,12 +202,15 @@ html {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
+  color: #5F5143;
+  font-family: 'League Spartan';
 }
 
 .card-text p {
   margin: 4px 0 0;
   font-size: 13px;
-  color: #444;
+  color: #5F5143;
+  font-family: 'Montserrat';
 }
 
 .activities-side {
@@ -214,23 +222,8 @@ html {
   
 }
 
-.message-box {
-  background-color: #fefae0;
-  border-radius: 8px;
-  padding: 60px;
-  font-size: 14px;
-  color: #5F5143;
-}
 
-.message-box.secondary {
-  background-color: #fefae0;
-}
 
-.message-box strong {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
 
 .logo-container {
   text-align: center;
@@ -367,4 +360,25 @@ html {
 @media screen and (min-width:768px) {
 
   
+}
+// SECTION MODAL
+.btn-secondary{
+  color: #5F5143;
+  background-color: #597D5E;
+  border-radius: 20px;
+
+}
+.btn-primary{
+    color: #5F5143;
+    background-color: #DBFEB8;
+    border-radius: 20px;
+
+}
+.BDD{
+  color: #5F5143;
+  background-color: #bfd8bd;
+  font-family: 'Montserrat';
+  border-radius: 20px;
+  font-size: 20px;
+  border: none;
 }

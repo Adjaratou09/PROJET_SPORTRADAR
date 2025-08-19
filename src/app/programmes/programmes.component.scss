@@ -33,6 +33,13 @@
         font-family: 'League spartan';
       }
     }
+  .tagline-icon {
+  position: absolute;
+  top: -60px;   /* ajuste la position verticale */
+  left: -25px;  /* ajuste la position horizontale */
+  width: 80px;  /* taille de l’icône */
+  height: auto;
+}
   }
 
 .hero-section {

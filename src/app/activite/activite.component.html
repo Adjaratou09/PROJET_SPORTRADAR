@@ -8,7 +8,7 @@
     <div class="form-row">
       <div class="form-group">
         <label for="situation">Votre situation</label>
-        <input type="text" id="situation" placeholder="1 trimestre de grossesse">
+        <input type="text" id="situation"  placeholder="1 trimestre de grossesse">
       </div>
       <div class="form-group">
         <label for="activite">Type d'activité préféré</label>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="btn-row">
-      <button type="submit">Rechercher</button>
+      <button type="submit" style="color: #5F5143;">Rechercher</button>
     </div>
   </form>
 </div>
@@ -148,10 +148,10 @@
     
   <div class="activity-wrapper">
   <div class="filter-bar">
-    <span class="filter">📍 Paris, rue Rivoli</span>
-    <span class="filter">🧘‍♀️ Sport zen</span>
-    <span class="filter">🚆 Trèves parv</span>
-    <span class="filter">Transports</span>
+    <span class="filter"> X Paris, rue Rivoli</span>
+    <span class="filter"> X Sport zen</span>
+    <span class="filter"> X Trèves parv</span>
+    <span class="filter"> X Transports</span>
   </div>
   <div class="activity-wrapper">
   <div class="map-and-list">
@@ -186,7 +186,7 @@
 
   </div>
 </div>
-<button (click)="ajouterActivitesManuelles()">Ajouter les activités manuellement</button>
+<button (click)="ajouterActivitesManuelles()" class="BDD" >Voir plus de cours</button>
 
 
 </div>
@@ -210,15 +210,15 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #5F5143;">Ta coach IA</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p> Tu es super forte viens courir avec nous !</p>
+        <p style="color: #5F5143;"> Tu es super forte viens courir avec nous !</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        <button type="button" class="btn-primary">enregistrer le message</button>
       </div>
     </div>
   </div>
