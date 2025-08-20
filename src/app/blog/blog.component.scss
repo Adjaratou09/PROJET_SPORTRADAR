@@ -2,21 +2,22 @@
   background: linear-gradient(to right, #fdf8dc, #e3ecc5);
   padding: 2rem 2rem;
   //text-align: center;
-  font-family: 'Poppins', sans-serif;
+  
 
 }
 
 .blog-title {
-  font-size: 2rem;
+  font-size: 25px;
   font-weight: 900;
   margin-bottom: 2rem;
-  color: #000;
+  color: #5f5143;
+  text-align: center;
 }
 
 .blog-meta {
   display: flex;
-  //align-items: center;
-  //justify-content: center;
+
+  justify-content: center;
   gap: 1rem;
   text-align: left;
 }
@@ -28,17 +29,17 @@
 }
 
 .blog-info {
-  font-size: 0.75rem;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #555;
+  color: #5f5143;
   margin: 0;
 }
 
 .blog-role {
-  font-size: 0.75rem;
+  font-size: 16px;
   font-style: italic;
-  color: #555;
+ color: #5f5143;
   margin: 0;
 }
 @media (max-width: 768px) {
@@ -64,7 +65,7 @@
 
 .left-column p, .right-column p {
 
-  color: #333;
+  color: #5f5143;
    max-width: 300px; /*  Rend le texte étroit */
   line-height: 1.8; /*  Aère les lignes */
   font-size: 1rem; /*  Optionnel, ajuste la taille */
@@ -110,7 +111,7 @@
   display: inline-block;
   font-weight: bold;
   color: #5f5143;
-  font-size: 1rem;
+  font-size: 16px;
   margin-bottom: 1rem;
 }
 
@@ -120,26 +121,18 @@
 }*/
 
 .pink {
-  background-color: white;
+  background-color: #fabec0;
   padding: 1rem 2rem;
   border-radius: 14px;
   display: inline-block;
   font-weight: bold;
-  color: #f6cec7;
-  font-size: 1.2rem;
+  color: #5f5143;
+  font-size: 16px;
   margin-bottom: 2rem;
   width: 100%;
      }
 
-/*.purple { 
-    
-   display: inline-block;         /* Permet de réduire la largeur au texte 
-  background-color: #f6cec7;     /* Couleur rose clair 
-  padding: 4px 10px;             /* Espacement intérieur 
-  border-radius: 4px;            /* Coins arrondis (optionnel) 
-  font-weight: bold;
-  color: #5F5143;    
- }*/
+
  h3{
   color: #5F5143;
   font-weight: bold;
@@ -147,24 +140,25 @@
 
 .podcast {
   display: flex;
-  //align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  font-size: 1.2rem;
+  align-items: center;
+
+  margin-top: 10px;
+  font-size: 16px;
+   color: #5f5143;
 }
 
 .podcast-icon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 // SECTION 3
 
 
 .blog-section {
-  //background: #f6f6e8;
-  //padding: 10px;
-  font-family: 'Inter', sans-serif;
+  
+  //font-family: 'Inter', sans-serif;
+  margin: 20px;
   
 }
 
@@ -175,9 +169,10 @@
 }
 
 .blog-title {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: 'Montserrat';
 }
 
 .meta-info {
@@ -195,16 +190,37 @@
 }
 
 .highlight-title {
-  color: #b03bbd;
+  color: #5F5143;
   font-weight: bold;
   font-size: 16px;
-  margin: 20px 0;
+  //margin: 20px;
+  background-color: #dde5b6;
+  display: inline-block;
 }
 
-.paragraphe {
-  font-size: 14px;
-  line-height: 1.5;
+.texte-grossesse{
+  font-size: 20px;
+  //line-height: 1.5;
+  background-color:#f6cec7;
+   padding: 0.5rem 1rem;
+   margin: 30px;
+  display: inline-block;
+  border-radius: 20px;
 }
+
+
+.column{
+  
+  border-right: 2px solid #5F5143; /* couleur et épaisseur */
+  
+  
+}
+hr {
+  border-top: 2px solid #5F5143; /* couleur et épaisseur */
+  margin: 20px 0;  
+  
+}
+
 .boussole-container {
   display: flex;
   justify-content: space-between;
@@ -222,19 +238,22 @@
 }
 
 .boussole-image {
-  //flex-shrink: 0;
-  width: 250px;
+  
+  width: 100px;
 
 }
-
-.rounded-img {
-  width: 500px;
-  border-radius: 50%;
+.column-right{
+  color: #5f5143;
+   max-width: 450px; /*  Rend le texte étroit */
+  line-height: 1.5; /*  Aère les lignes */
+  font-size: 16px; /*  Optionnel, ajuste la taille */
+  //margin: 0 auto; /* Centre le bloc s’il est seul */
+  text-align: justify; /*  Justifie pour un rendu plus propre */
 }
 
 
 .pink-box {
-  //background: #fbe4e2;
+  
   border-radius: 10px;
   padding: 10px;
   margin-top: 20px;
@@ -242,43 +261,41 @@
 
 .pink-box.light {
   display: flex;
-  //justify-content: space-between;
+  
   align-items: flex-start;
   gap: 20px;
-  //background-color: #f6f6e8;
   padding: 20px;
   border-radius: 10px;
   flex-wrap: wrap; /* pour le responsive */
+  
 }
 
 .pink-box h4 {
-  margin-bottom: 10px;
+  
   font-weight: bold;
-  color: #a33a6b;
+  color: #5F5143;
+  background-color: #f6cec7;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
 }
 
 .rounded-img {
-  width: 150px;
+  width: 160px;
   border-radius: 20px;
   margin: 20px 0;
 }
 
-.caption {
-  font-size: 13px;
-  color: #444;
-  font-style: italic;
-}
 
 .top-image {
-  width: 50%;
-  border-radius: 15px;
+  width: 70%;
+  
 }
 
 .image {
   grid-column: 2;
-  display: flex;
-padding: 5px;
-  //margin-top: 5px;
+  //display: flex;
+padding: 20px;
+  margin-top: 5px;
   //gap: 10px;
 }
 
