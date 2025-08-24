@@ -44,7 +44,7 @@
     </div>
 
     <div class="btn-row">
-      <button type="submit" style="color: #5F5143;">Rechercher</button>
+      <a [routerLink]="'/programmes'" class="button" style="color: #5F5143;">Rechercher</a>
     </div>
   </form>
 </div>
@@ -59,7 +59,7 @@
 <!-- Section suivante : Activités à venir -->
 <section id="section-suivante" class="section-suivante">
   <h3>Activités à venir pour vous</h3>
-  <button class="btn-connect">Se connecter pour réserver</button>
+  <a [routerLink]="'/connexion'" class="btn-connect">Se connecter pour réserver</a>
 </section>
 
 <!-- Section Grille des activités-->

@@ -73,3 +73,42 @@ export class AuthService {
     return setDoc(ref, data, { merge: true });
   }
 }
+/*
+import { Injectable } from '@angular/core';
+import {
+  Auth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  sendEmailVerification,
+  UserCredential,
+  updateProfile,
+  
+} from '@angular/fire/auth';
+
+@Injectable({ providedIn: 'root' })
+export class AuthService {
+  login(email: string, password: string) {
+    throw new Error('Method not implemented.');
+  }
+  constructor(private auth: Auth) {}
+
+ async signUpEmail(email: string, password: string, displayName?: string): Promise<UserCredential> {
+    const cred = await createUserWithEmailAndPassword(this.auth, email, password);
+    if (displayName) await updateProfile(cred.user, { displayName });
+    try { await sendEmailVerification(cred.user); } catch {}
+    return cred; // <= ne pas oublier
+  }
+
+  signInEmail(email: string, password: string) {
+    return signInWithEmailAndPassword(this.auth, email, password);
+  }
+
+  get currentUser() { return this.auth.currentUser; }
+
+  logout() { return signOut(this.auth); }
+}
+
+function signOut(auth: Auth) {
+  throw new Error('Function not implemented.');
+}*/
+

@@ -5,13 +5,16 @@ import { Observable } from 'rxjs';
 import * as L from 'leaflet';
 import { NgIf, NgFor } from '@angular/common';
 import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+//import { RouterLink } from "../../../node_modules/@angular/router/router_module.d-Bx9ArA6K";
+import { RouterLink } from '@angular/router';
+
 declare var bootstrap:any;
 
 
 @Component({
   selector: 'app-activite',
   standalone: true,
-  imports: [CommonModule, NgIf, NgFor],
+  imports: [CommonModule, NgIf, NgFor, RouterLink],
   templateUrl: './activite.component.html',
   styleUrls: ['./activite.component.scss']
 })

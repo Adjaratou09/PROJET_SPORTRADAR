@@ -54,8 +54,9 @@ account = {
   }
 
   submitForm() {
-    // Appel API ou Firebase ici
+    // Formulaire envoyé à Firebase 
     console.log('Formulaire envoyé ✅', this.formData);
     alert('Inscription réussie !');
   }
 }
+
