@@ -68,15 +68,25 @@
   font-family: 'Bellaboo', cursive;
   color: #4b3f2d;
   background-color: #fff;   /* optionnel pour contraste */
-  //border-radius: 12px;      /* optionnel pour un effet arrondi */
-}
+  //border-radius: 12px;      /* optionnel pour un effet arrondi
+   }
+
 
 .custom-banner h2 {
-  font-size: 1.9rem;
-  margin: 0;
-  line-height: 1.5;
+  font-size: 2rem;
+  margin: 2;
+  line-height: 1.8;
+  font-family: 'Bellaboo', cursive;
+  color: #4b3f2d;
+ 
 }
-
+.custom-banner P {
+  font-size: 1.3rem;
+  margin: 2;
+  line-height: 1.8;
+  font-family: 'Bellaboo', cursive;
+  color: #4b3f2d;
+}
 .banner-icon {
   position: absolute;
   top: -20px;
@@ -94,7 +104,13 @@
   text-align: center;
    
 }
-
+.programme-section h2{
+  font-size: 2rem;
+  margin: 2;
+  line-height: 1.8;
+  font-family: 'Bellaboo', cursive;
+  color: #4b3f2d;
+}
 
 .programme-cards {
   display: flex;
@@ -104,13 +120,15 @@
 }
 
 .card {
-  background: #f6cec7;
+  //background: #DDE5B6;
+background: #f6cec7;
   border-radius: 15px;
   padding: 20px;
   width: 280px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
 }
+
 
 
 .programme-img {
@@ -181,24 +199,16 @@ font-family: 'montserrat';
   color: #5f5143;
    font-family: 'montserrat';
 }
-.card-endo{
-   background: #f6cec7;
+.card2{
+  background: #DDE5B6;
+   //background: #f6cec7;
   border-radius: 15px;
   padding: 20px;
   width: 280px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
 }
-.progamme-endo{
-  
- display: block;
-  margin: 0 auto;            /* centre horizontalement dans le conteneur */
-  width: 100%;
-  height: 250px;
-  object-fit: cover;         /* garde les proportions et remplit */
-  object-position: center;   /* centre le contenu dans l'image */
-  border-radius: 10px;
-}
+
 
 /* Section format pratique*/
 .format-section {
@@ -247,25 +257,6 @@ color: #5f5143;
 
 
 
-
-/*.icon-circle-arrow {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  border: 1px solid #aaa;
-  border-radius: 50%;
-  font-size: 14px;
-  color: #777;
-}
-
-.icon-circle-arrow::before {
-  content: "›"; /* ou → selon le style 
-  font-weight: bold;
-}*/
-
-
 .btn-format {
   border: none;
   border-radius: 10px;
@@ -291,15 +282,15 @@ background-color: #facec7;
 
 
 .video-section {
-  background: url('/assets/PROGRAMMEVIDEO.gif') no-repeat center center;
+  background: url('/assets/Application.png') no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #2c3e50;
+  //color: #2c3e50;
 
   .overlay {
     background-color: #f7f8f7b7;
