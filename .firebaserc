@@ -1,7 +1,7 @@
 {
   "projects": {
-    
-    "prod": "ias-b3-elearning-g4-sportradar"
+    "prod": "ias-b3-elearning-g4-sportradar",
+    "default": "ias-b3-elearning-g4-sportradar"
   },
   "targets": {},
   "etags": {}
