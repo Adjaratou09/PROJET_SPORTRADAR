@@ -27,7 +27,7 @@ export const routes: Routes = [
        component: InscriptionComponent
 
     },
-    {path:'contact',
+   {path:'contact',
        component: ContactComponent
 
     },
